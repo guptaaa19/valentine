@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffe0e0; /* Light pink background color */
+        }
+
+        .content-container {
+            text-align: center;
+            /* padding: 50px; */
+            background-color: #ffffff; 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #yesButton {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        #noButton {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        #gifImage {
+            max-width: 95%; 
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h1>Will You Be My Valentine?</h1>
+        <p>I hope you say yes!</p>
+        <img id="gifImage" src="https://tenor.com/view/tkthao219-bubududu-panda-gif-22451119.gif" alt="Cute Dudu Bubu Gif">
+        <div class="button-container">
+            <button id="yesButton" onclick="changeGif()">Yes</button>
+            <button id="noButton" onclick="changeResponse()">No</button>
+        </div>
+    </div>
+
+    <script>
+        var noButtonClickCount = 0;
+
+        function changeGif() {
+            var gifImage = document.getElementById('gifImage');
+            gifImage.src = "https://tenor.com/view/bubu-dudu-kiss-kiss-gif-gif-222279956312477566.gif"; 
+        }
+
+        function changeResponse() {
+            var yesButton = document.getElementById('yesButton');
+            var noButton = document.getElementById('noButton');
+
+            if (noButtonClickCount === 0) {
+                yesButton.style.transform = 'scale(2)';
+                yesButton.style.marginRight = '20px';
+                noButton.innerHTML = 'Really Babes!?';
+                noButton.style.marginLeft = '30px';
+            } else if (noButtonClickCount === 1) {
+                yesButton.style.transform = 'scale(3)';
+                yesButton.style.marginRight = '20px';
+                noButton.innerHTML = 'Are you Sure ?';
+                noButton.style.marginLeft = '300';
+            } else if (noButtonClickCount === 2) {
+                yesButton.style.transform = 'scale(4)';
+                yesButton.style.marginRight = '40px';
+                noButton.innerHTML = 'Think again!!';
+                noButton.style.marginLeft = '50px'; 
+            } else if (noButtonClickCount === 3) {
+                yesButton.style.transform = 'scale(5)';
+                yesButton.style.marginRight = '50px';
+                noButton.innerHTML = 'Last Chance!';
+                noButton.style.marginLeft = '110px';
+            } else if (noButtonClickCount === 4) {
+                yesButton.style.transform = 'scale(6)';
+                yesButton.style.marginRight = '60px';
+                noButton.innerHTML = 'You might regret it';
+                noButton.style.marginLeft = '110px'; 
+            } else if (noButtonClickCount === 5) {
+                yesButton.style.transform = 'scale(7)';
+                yesButton.style.marginRight = '70px';
+                noButton.innerHTML = 'Are you absolutely certain?';
+                noButton.style.marginLeft = '110px'; 
+            } else if (noButtonClickCount === 6) {
+                yesButton.style.transform = 'scale(8)';
+                yesButton.style.marginRight = '80px';
+                noButton.innerHTML = 'Have a Heart, Dont be so cold!!';
+                noButton.style.marginLeft = '200px'; 
+            } else if (noButtonClickCount === 7) {
+                yesButton.style.transform = 'scale(9)';
+                yesButton.style.marginRight = '90px';
+                noButton.innerHTML = 'Change of heart??';
+                noButton.style.marginLeft = '200px'; 
+            } else if (noButtonClickCount === 8) {
+                yesButton.style.transform = 'scale(10)';
+                yesButton.style.marginRight = '100px';
+                noButton.innerHTML = 'Would you reconsider?';
+                noButton.style.marginLeft = '200px'; 
+            } else if (noButtonClickCount === 9) {
+                yesButton.style.transform = 'scale(11)';
+                yesButton.style.marginRight = '110px';
+                noButton.innerHTML = 'You hurting my feelings:(';
+                noButton.style.marginLeft = '250px'; 
+            } else if (noButtonClickCount === 11) {
+                noButton.style.transform = 'scale(13)';
+                noButton.style.marginRight = '130px';
+                noButton.innerHTML = 'FUCK YOU!!!';
+               //noButton.style.marginLeft = '50px'; 
+            }
+
+            noButtonClickCount++;
+        }
+    </script>
+</body>
+</html>
